@@ -17,4 +17,8 @@ module Synapse
   module EventStore
     autoload :Mongo
   end
+
+  module Serialization
+    autoload :OrderedHashToHashConverter, 'synapse/serialization/converter/bson'
+  end
 end
