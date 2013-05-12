@@ -6,6 +6,7 @@ end
 
 require 'pp'
 require 'test/unit'
+require 'rr'
 require 'synapse-mongo'
 
 class Test::Unit::TestCase

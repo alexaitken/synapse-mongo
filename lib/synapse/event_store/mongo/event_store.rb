@@ -28,6 +28,8 @@ module Synapse
             first_sequence_number = last_snapshot_commit[0].sequence_number
           end
 
+          first_sequence_number = first_sequence_number.next
+
           cursor = @storage_strategy.fetch_events type_identifier, aggregate_id, first_sequence_number
 
           unless last_snapshot_commit or cursor.has_next?
@@ -47,9 +49,9 @@ module Synapse
 
           begin
             @template.event_collection.insert documents
-          rescue Mongo::OperationFailure => ex
-            if e.error_code == 11000
-              raise Repository::ConcurrencyException,
+          rescue ::Mongo::OperationFailure => exception
+            if exception.error_code == 11000
+              raise Repository::ConcurrencyError,
                 'Event for this aggregate and sequence number already present'
             end
 
