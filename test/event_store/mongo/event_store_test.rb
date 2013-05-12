@@ -9,7 +9,7 @@ module Synapse
           client = ::Mongo::MongoClient.new
           template = Template.new client
 
-          serializer = Serialization::OxSerializer.new
+          serializer = Serialization::MarshalSerializer.new
           upcaster_chain = Upcasting::UpcasterChain.new serializer.converter_factory
 
           [DocumentPerCommitStrategy, DocumentPerEventStrategy].each do |type|
