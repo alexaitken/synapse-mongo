@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.author = 'Ian Unruh'
   s.email = 'ianunruh@gmail.com'
   s.homepage = 'https://github.com/iunruh/synapse-mongo'
-  s.description = 'A versatile CQRS and event sourcing framework'
-  s.summary = 'A versatile CQRS and event sourcing framework'
+  s.description = 'MongoDB implementations for the Synapse CQRS framework'
+  s.summary = 'MongoDB implementations for the Synapse CQRS framework'
 
   s.files = Dir.glob '{lib,test}/**/*'
   s.require_path = 'lib'
