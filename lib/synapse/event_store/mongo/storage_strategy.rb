@@ -110,4 +110,4 @@ module Synapse
       end # StorageStrategy
     end # Mongo
   end # EventStore
-end # Synapse
+end

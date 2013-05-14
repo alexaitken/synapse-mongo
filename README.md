@@ -8,6 +8,6 @@ Implementations of various Synapse CQRS components for MongoDB
 + Non-event sourced repositories (planned)
   + MongoMapper
   + Mongoid
-+ Process repository (planned)
++ Process repository (COMPLETE)
 + Audit log (planned)
 + Distributed locking (possibility)

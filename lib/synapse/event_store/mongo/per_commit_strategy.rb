@@ -250,4 +250,4 @@ module Synapse
       end # DocumentPerCommitStrategy
     end # Mongo
   end # EventStore
-end # Synapse
+end

@@ -8,9 +8,12 @@ module Synapse
         def test_integration
           client = ::Mongo::MongoClient.new
           template = Template.new client
+          template.event_collection.drop
+          template.snapshot_collection.drop
 
-          serializer = Serialization::MarshalSerializer.new
-          upcaster_chain = Upcasting::UpcasterChain.new serializer.converter_factory
+          converter_factory = Serialization::ConverterFactory.new
+          serializer = Serialization::MarshalSerializer.new converter_factory
+          upcaster_chain = Upcasting::UpcasterChain.new converter_factory
 
           [DocumentPerCommitStrategy, DocumentPerEventStrategy].each do |type|
             strategy = type.new template, serializer, upcaster_chain

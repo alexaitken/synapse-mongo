@@ -27,7 +27,7 @@ module Synapse
         def snapshot_collection
           database.collection @snapshot_collection_name
         end
-      end # MongoTemplate
+      end # Template
     end # Mongo
   end # EventStore
-end # Synapse
+end

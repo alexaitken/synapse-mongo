@@ -85,4 +85,4 @@ module Synapse
       end # MongoEventStore
     end # Mongo
   end # EventStore
-end # Synapse
+end

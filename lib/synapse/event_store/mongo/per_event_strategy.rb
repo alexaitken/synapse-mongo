@@ -140,4 +140,4 @@ module Synapse
       end # DocumentPerEventStrategy
     end # Mongo
   end # EventStore
-end # Synapse
+end

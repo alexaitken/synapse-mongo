@@ -58,6 +58,6 @@ module Synapse
           end
         end
       end # CursorDomainEventStream
-    end
-  end
+    end # Mongo
+  end # EventStore
 end

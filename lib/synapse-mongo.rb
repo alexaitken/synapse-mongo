@@ -9,12 +9,17 @@ module Synapse
     # Utility classes used by Mongo components
     module Mongo
       extend ActiveSupport::Autoload
-
       autoload :BaseTemplate
     end
   end
 
   module EventStore
+    extend ActiveSupport::Autoload
+    autoload :Mongo
+  end
+
+  module ProcessManager
+    extend ActiveSupport::Autoload
     autoload :Mongo
   end
 
