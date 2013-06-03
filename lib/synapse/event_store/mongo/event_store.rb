@@ -75,9 +75,7 @@ module Synapse
         def load_last_snapshot(type_identifier, aggregate_id)
           cursor = @storage_strategy.fetch_last_snapshot type_identifier, aggregate_id
 
-          unless cursor.has_next?
-            return
-          end
+          return unless cursor.has_next?
 
           first = cursor.next_document
           @storage_strategy.extract_events first, aggregate_id
