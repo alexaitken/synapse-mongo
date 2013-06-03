@@ -7,7 +7,8 @@ Gem::Specification.new do |s|
   s.version = Synapse::Mongo::VERSION.dup
   s.author = 'Ian Unruh'
   s.email = 'ianunruh@gmail.com'
-  s.homepage = 'https://github.com/iunruh/synapse-mongo'
+  s.license = 'Apache 2.0'
+  s.homepage = 'https://github.com/ianunruh/synapse-mongo'
   s.description = 'MongoDB implementations for the Synapse CQRS framework'
   s.summary = 'MongoDB implementations for the Synapse CQRS framework'
 
