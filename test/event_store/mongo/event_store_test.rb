@@ -5,7 +5,7 @@ module Synapse
     module Mongo
 
       class MongoEventStoreTest < Test::Unit::TestCase
-        def test_integration
+        should 'integrate with different storage strategies' do
           client = ::Mongo::MongoClient.new
           template = Template.new client
           template.event_collection.drop

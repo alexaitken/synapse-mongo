@@ -64,7 +64,7 @@ module Synapse
           template = resolve @template
           resource_injector = resolve @resource_injector, true
 
-          process_repository = MongoProcessRepository.new serializer, template
+          process_repository = ProcessManager::Mongo::MongoProcessRepository.new serializer, template
           if resource_injector
             process_factory.resource_injector = resource_injector
           end

@@ -5,7 +5,7 @@ module Synapse
     module Mongo
 
       class BaseTemplateTest < Test::Unit::TestCase
-        def test_database
+        should 'connect and authenticate to database only once' do
           client = Object.new
           database = Object.new
 

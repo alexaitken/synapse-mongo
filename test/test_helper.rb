@@ -6,6 +6,7 @@ end
 
 require 'pp'
 require 'test/unit'
+require 'shoulda/context'
 require 'rr'
 require 'synapse-mongo'
 

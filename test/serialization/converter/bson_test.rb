@@ -3,7 +3,7 @@ require 'test_helper'
 module Synapse
   module Serialization
     class OrderedHashToHashConverterTest < Test::Unit::TestCase
-      def test_convert
+      should 'convert a BSON ordered hash to a normal hash' do
         converter = OrderedHashToHashConverter.new
 
         assert_equal BSON::OrderedHash, converter.source_type

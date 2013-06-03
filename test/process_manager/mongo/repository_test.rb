@@ -16,7 +16,7 @@ module Synapse
           @repository = MongoProcessRepository.new serializer, template
         end
 
-        def test_add
+        should 'persist processes to the database' do
           process = Process.new
 
           @repository.add process
@@ -26,7 +26,7 @@ module Synapse
           assert_equal 0, process.correlations.additions.count
         end
 
-        def test_commit
+        should 'commit changes to processes to the database' do
           correlation = Correlation.new :order_id, '123'
 
           process = Process.new
@@ -45,7 +45,7 @@ module Synapse
           assert_nil @repository.load process.id
         end
 
-        def test_find
+        should 'support finding processes by their correlation keys' do
           correlation_a = Correlation.new :order_id, '123'
           correlation_b = Correlation.new :order_id, '456'
 
