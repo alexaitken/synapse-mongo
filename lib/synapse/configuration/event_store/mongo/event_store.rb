@@ -1,6 +1,6 @@
 module Synapse
   module Configuration
-    # Definition builder used to create Mongo-backed event stores
+    # Definition builder used to create a Mongo-backed event store
     #
     # @example The minimum possible effort to build an event store
     #   mongo_event_store do
@@ -25,12 +25,16 @@ module Synapse
       end
 
       # Changes the type of storage strategy to document-per-commit
+      #
+      # @see EventStore::Mongo::DocumentPerCommitStrategy
       # @return [undefined]
       def use_per_commit_strategy
         @storage_strategy_type = EventStore::Mongo::DocumentPerCommitStrategy
       end
 
       # Changes the type of storage strategy to document-per-event
+      #
+      # @see EventStore::Mongo::DocumentPerEventStrategy
       # @return [undefined]
       def use_per_event_strategy
         @storage_strategy_type = EventStore::Mongo::DocumentPerEventStrategy
@@ -38,6 +42,7 @@ module Synapse
 
       # Changes the serializer to use with this event store
       #
+      # @see Serialization::Serializer
       # @param [Symbol] serializer
       # @return [undefined]
       def use_serializer(serializer)
@@ -46,6 +51,7 @@ module Synapse
 
       # Changes the Mongo template to use with this event store
       #
+      # @see EventStore::Mongo::Template
       # @param [Symbol] template
       # @return [undefined]
       def use_template(template)
@@ -54,6 +60,7 @@ module Synapse
 
       # Changes the upcaster chain to use with this event store
       #
+      # @see Upcasting::UpcasterChain
       # @param [Symbol] upcaster_chain
       # @return [undefined]
       def use_upcaster_chain(upcaster_chain)

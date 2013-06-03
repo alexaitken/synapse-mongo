@@ -3,7 +3,7 @@ require 'mongo'
 require 'synapse'
 
 require 'synapse/mongo/version'
-require 'synapse/configuration/event_store/mongo'
+require 'synapse/configuration/mongo'
 
 module Synapse
   module Common
