@@ -12,9 +12,10 @@ Gem::Specification.new do |s|
   s.description = 'MongoDB implementations for the Synapse CQRS framework'
   s.summary = 'MongoDB implementations for the Synapse CQRS framework'
 
-  s.files = Dir.glob '{lib,test}/**/*'
+  s.files = Dir['LICENSE', 'README.md', 'lib/**/*']
+  s.test_files = Dir['test/**/*']
   s.require_path = 'lib'
 
-  s.add_dependency 'synapse-core', '~> 0.5'
+  s.add_dependency 'synapse-core', '~> 0.5.6'
   s.add_dependency 'mongo'
 end
