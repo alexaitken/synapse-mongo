@@ -1,6 +1,6 @@
 require 'active_support'
 require 'mongo'
-require 'synapse'
+require 'synapse-core'
 
 require 'synapse/mongo/version'
 require 'synapse/configuration/mongo'

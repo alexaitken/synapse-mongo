@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'synapse-core', '~> 0.6.0'
   s.add_dependency 'mongo'
+  s.add_development_dependency 'rake'
 end
