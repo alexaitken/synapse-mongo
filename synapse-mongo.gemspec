@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
   s.require_path = 'lib'
 
-  s.add_dependency 'synapse-core', '~> 0.5.6'
+  s.add_dependency 'synapse-core', '~> 0.6.0'
   s.add_dependency 'mongo'
 end
